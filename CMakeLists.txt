@@ -12,6 +12,7 @@ set(XRAY_DIR ${CMAKE_SOURCE_DIR}/src/plugin.xray)
 set(AIMBOT_DIR ${CMAKE_SOURCE_DIR}/src/plugin.aimbot)
 set(ASSIST_DIR ${CMAKE_SOURCE_DIR}/src/plugin.assist)
 set(RADAR_DIR ${CMAKE_SOURCE_DIR}/src/plugin.radar)
+set(DIAGNOSTICS_DIR ${CMAKE_SOURCE_DIR}/src/plugin.diagnostics)
 set(WSOCKLOADER_DIR ${CMAKE_SOURCE_DIR}/src/wsockloader)
 
 file(GLOB IMGUI_FILES
@@ -65,3 +66,9 @@ add_library(calamari-radar SHARED
     ${RADAR_DIR}/radar.cpp
 )
 target_link_libraries(calamari-radar calamari)
+
+add_library(calamari-diagnostics SHARED
+    ${DIAGNOSTICS_DIR}/diagnostics.h
+    ${DIAGNOSTICS_DIR}/diagnostics.cpp
+)
+target_link_libraries(calamari-diagnostics calamari)
