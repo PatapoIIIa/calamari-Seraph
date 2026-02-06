@@ -29,6 +29,9 @@ Should work for all BYOND 513 versions, and 512 too, in both native Windows and 
 Plugin source in «src» folder.
 Plugin SDK in «sdk» folder.
 
+# Diagnostics helper
+There is a new optional plugin called **Diagnostics** that dumps runtime information (loaded modules, PE headers, and resolved BYOND exports) to `Documents\\BYOND\\Calamari\\diagnostics.txt`. Enable it by copying `calamari-diagnostics.dll` into your Calamari plugins folder.
+
 
 # Conclusion:
 Better use ByondControl instead of this non-working piece of code.
